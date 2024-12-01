@@ -1,0 +1,202 @@
+:root{
+    --white:#dedad0;
+    --blue:#1d2343;
+    --green: #509c88;
+    --red: #c72040;
+    --black:#171518;
+    --gray:#6b7983;
+
+
+}
+
+/* Ensure the entire screen is used */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: row; /* Stack divs vertically */
+}
+
+/* Top Div */
+.top-div {
+    display: flex;  /* Flex container to split into two sections */
+    flex: 1; /* Take up 50% of the screen */
+}
+
+.left-div, .right-div {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.left-div {
+    background-color: var(--blue); /* Light gray */
+    flex: 2; /* Takes up 2/3 of the space */
+}
+
+.right-div {
+    background-color:var(--blue); /* Light blue */
+    flex: 1; /* Takes up 1/3 of the space */
+}
+
+/* Bottom Div */
+.bottom-div {
+    display: flex;
+    flex-direction: column; /* Stack divs vertically */
+    flex: 1; /* Take up 50% of the screen */
+}
+
+.top-bottom-div, .bottom-bottom-div {
+    display: flex;
+    justify-content: space-around; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.top-bottom-div {
+    border: 20px solid var(--blue);
+    background-color: var(--white); /* Light green */
+    flex: 1; /* Takes up 1/3 of the space */
+}
+
+.bottom-bottom-div {
+    background-color: var(--white); /* Light pink */
+    border: 20px solid var(--blue);
+    flex: 2; /* Takes up 2/3 of the space */
+}
+
+.rotary-switch {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid rgb(83, 74, 74);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    cursor: pointer;
+  }
+  .rotary-switch .state {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    pointer-events: none;
+  }
+  .rotary-switch:before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 50px;
+    background: white;
+    border: 6px solid black;
+    border-top: 0px;
+    border-radius: 5px;
+  }
+
+  .rotary-switch-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .label {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+.label-1 {
+    top: 40%;
+    right: -25%;
+}
+
+.label-0 {
+    top: -45%;
+}
+
+.label-MotorName {
+    top: 110%;
+}
+
+.led-indicator {
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    margin: 20px auto;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Green LED states */
+.led-indicator.green.off {
+    background-color: var(--green); /* Dim green */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.led-indicator.green.on {
+    background-color: #00ff00; /* Bright green */
+    box-shadow: 0 0 20px 5px #00ff00;
+}
+
+/* Red LED states */
+.led-indicator.red.off {
+    background-color: var(--red); /* Dim red */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.led-indicator.red.on {
+    background-color: #ff0000; /* Bright red */
+    box-shadow: 0 0 20px 5px #ff0000;
+}
+
+/* Blue LED states */
+.led-indicator.blue.off {
+    background-color: var(--blue); /* Dim blue */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.led-indicator.blue.on {
+    background-color: #0000ff; /* Bright blue */
+    box-shadow: 0 0 20px 5px #0000ff;
+}
+
+/* Styles for LED toggle buttons */
+.led-toggle-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #163064;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+.led-toggle-btn:hover {
+    background-color: #0d1b3a;
+}
+
+.letterfont {
+    font-family: 'Orbitron', sans-serif; /* Apply Orbitron font */
+    font-size: 60px; /* Adjust the size of the text */
+    font-weight: 700; /* Set the font weight (optional) */
+}
+
+
+.letterfont2 {
+    font-family: 'Orbitron', sans-serif; /* Apply Orbitron font */
+    font-size: 30px; /* Adjust the size of the text */
+    font-weight: 700; /* Set the font weight (optional) */
+}

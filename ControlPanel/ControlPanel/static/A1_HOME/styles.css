@@ -1,0 +1,26 @@
+/* Ensure the entire screen is used */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Stack divs vertically */
+}
+
+.top-div, .bottom-div {
+    flex: 1; /* Divide the space equally between divs */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.top-div {
+    background-color: #f0f0f0; /* Light gray */
+}
+
+.bottom-div {
+    background-color: #d3e4f1; /* Light blue */
+}
