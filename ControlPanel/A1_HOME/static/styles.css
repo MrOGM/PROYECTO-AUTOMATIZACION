@@ -25,6 +25,21 @@ body {
 .top-div {
     display: flex;  /* Flex container to split into two sections */
     flex: 1; /* Take up 50% of the screen */
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+}
+
+.nyan {
+    width: 90%; /* Make the image cover 90% of the container */
+    height: 90%;
+    border-radius: 25px;
+    filter: grayscale(100%) contrast(100%) saturate(0); /* Pauses the GIF by adding grayscale and zero saturation */
+    transition: filter 0.3s ease; /* Smooth transition between paused and playing states */
+}
+
+.nyan:hover  {
+    filter: none; /* Removes the grayscale effect to allow the GIF to animate */
 }
 
 .left-div, .right-div {
